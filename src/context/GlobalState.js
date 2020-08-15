@@ -5,9 +5,9 @@ import AppReducer from './AppReducer';
 const initialState = {
     transections : [
         {"id": 1, "description": "Income 1", "transectionAmount": 1000},
-        {"id": 2, "description": "Expense 1", "transectionAmount": 500},
+        {"id": 2, "description": "Expense 1", "transectionAmount": -500},
         {"id": 3, "description": "Income 2", "transectionAmount": 900},
-        {"id": 4, "description": "Expense 2", "transectionAmount": 850},
+        {"id": 4, "description": "Expense 2", "transectionAmount": -850},
         ]
 }
 
