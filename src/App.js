@@ -4,6 +4,8 @@ import {Header} from './components/Header'
 import {Balance} from './components/Balance'
 import {AccountSummary} from './components/AccountSummary'
 import {TransectionHistory} from './components/TransectionHistory'
+import {AddTransection} from './components/AddTransection'
+
 
 
 function App() {
@@ -12,14 +14,11 @@ function App() {
             <Header /> 
         <div className="container"> 
             <Balance />
+            <AccountSummary />
+            <TransectionHistory />
+            <AddTransection />
         </div>
-        <div> 
-             <AccountSummary />
-        </div>
-        <div> 
-             <TransectionHistory />
-        </div>
-     </div>
+    </div>
   );
 }
 
