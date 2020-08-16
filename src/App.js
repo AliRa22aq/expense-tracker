@@ -8,6 +8,7 @@ import {AddTransection} from './components/AddTransection'
 import {GlobalProvider} from './context/GlobalState'
 
 
+
 function App() {
   return (
     <GlobalProvider>
