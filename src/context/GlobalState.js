@@ -3,12 +3,7 @@ import AppReducer from './AppReducer';
 
 //create the initial state
 const initialState = {
-    transections : [
-        {"id": 1, "description": "Income 1", "transectionAmount": 1000},
-        {"id": 2, "description": "Expense 1", "transectionAmount": -500},
-        {"id": 3, "description": "Income 2", "transectionAmount": 900},
-        {"id": 4, "description": "Expense 2", "transectionAmount": -850},
-        ]
+    transections :[]
 }
 
 //create global context 
@@ -19,11 +14,29 @@ export const GlobalProvider = ({children}) => {
     // eslint-disable-next-line
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
+    function delTransection(id) {
+        dispatch ({
+            type: 'DELETE_TRANSECTION',
+            payload: id
+        });
+    }
+
+    function addTransection(transection) {
+        dispatch ({
+            type: 'ADD_TRANSECTION',
+            payload: transection
+        });
+    }
+
+
+
     return (
 
         <GlobalContext.Provider value = {
             {
-                 transections: state.transections
+                 transections: state.transections,
+                 delTransection,
+                 addTransection
             }
         }>
 
