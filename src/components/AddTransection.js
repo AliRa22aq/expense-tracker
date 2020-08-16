@@ -26,9 +26,9 @@ export const AddTransection = () => {
             <h3> Add New Transection</h3>
             <form onSubmit={onSubmit}> 
             <div className="form-control"> 
-                <labal htmlFor = "description" > 
-                        Description
-                </labal>
+                <label htmlFor="description"> 
+                Description
+                </label>
                 <input 
                     type="text" 
                     id="description" 
@@ -46,7 +46,7 @@ export const AddTransection = () => {
                     id="transectionAmount" 
                     value = {transectionAmount}
                     onChange = {(e)=> setTransecrtionAmount (e.target.value) }
-                    placeholder="Dollar Value of Transaction"
+                    placeholder="Enter Positive value for Income and Negarive for Expense"
                     required ="required"   />
             
             </div>
