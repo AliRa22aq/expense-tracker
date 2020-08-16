@@ -34,8 +34,7 @@ export const AddTransection = () => {
                     id="description" 
                     value = {description}
                     onChange = {(e)=> setDescription(e.target.value) } 
-                    placeholder="Details of the Transection" 
-                    value = {description} />
+                    placeholder="Details of the Transection"  />
             </div>
             <div className="form-control">   
             <label htmlFor="transectionamount"> 
