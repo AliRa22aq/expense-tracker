@@ -11,7 +11,7 @@ export const GlobalContext = createContext(initialState);
 
 //create a provider for the Global Context
 export const GlobalProvider = ({children}) => {
-    // eslint-disable-next-line
+   
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
     function delTransection(id) {
@@ -43,5 +43,5 @@ export const GlobalProvider = ({children}) => {
                    {children}
 
              </GlobalContext.Provider>
-    )
+    );
 }
