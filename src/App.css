@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: rgb(213, 219, 226);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,18 +20,18 @@ body {
 }
 
 .container {
-  margin: 30px auto;
-  width: 350px;
+  margin: 10px auto;
+  width: 500px;
 }
 
 h1 {
-  letter-spacing: 1px;
-  margin: 0;
+  letter-spacing: 2px;
+  margin: 2;
   text-align: center;
 }
 
 h2 {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: 0;
   text-align: center;
 }
@@ -39,7 +39,7 @@ h2 {
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
-  margin: 40px 0 10px;
+  margin: 10px 0 10px;
   text-align: center;
 }
 
@@ -74,12 +74,12 @@ h4 {
 }
 
 .money.plus {
-  color: #b6960a;
+  color: green;
   font-weight: bold;
 }
 
 .money.minus {
-  color: #2da3ad; 
+  color: red; 
   font-weight: bold;
 }
 
@@ -101,16 +101,16 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: lightsteelblue;
+  background-color: blueviolet;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
   display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
+  font-size: 20px;
+  margin: 10px 0 50px;
+  padding: 15px;
   width: 100%;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .btn:focus,
@@ -136,22 +136,22 @@ input[type='number'] {
 }
 
 .list li.plus {
-  border-right: 5px solid #b6960a;
+  border-right: 5px solid lightgreen;
 }
 
 .list li.plus:hover {
-  border-right: 5px solid #b6960a;
-  background-color: #b6960a;
+  border-right: 5px solid green;
+  background-color: lightgreen;
   color: #f7f7f7
 }
 
 .list li.minus {
-  border-right: 5px solid #2da3ad;
+  border-right: 5px solid lightsalmon;
 }
 
 .list li.minus:hover {
-  border-right: 5px solid #2da3ad;
-  background-color: #2da3ad;
+  border-right: 5px solid red;
+  background-color: lightsalmon;
   color: #f7f7f7
 }
 
@@ -174,4 +174,29 @@ input[type='number'] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+
+.room {
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  font-size: x-large;
+  
+}
+
+.lit {
+  background-color: white;
+  color: black;
+  }
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.name {
+  color: yellow;
+  font-size: smaller;
+
 }
