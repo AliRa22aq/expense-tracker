@@ -1,26 +1,41 @@
-import React,{useState} from 'react'
-
-
-
+import React,{useState, useContext} from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
 export const AddTransection = () => {
 
-    const [Description, setDescription] = useState();
-    const [TransecrtionAmount, setTransecrtionAmount] = useState();
+    const [description, setDescription] = useState('');
+    const [transectionAmount, setTransecrtionAmount] = useState('');
+
+    const {addTransection} = useContext(GlobalContext);
+
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        const newTransectoin = {
+            id : new Date().getTime(),
+            description,
+            transectionAmount: +transectionAmount
+        }
+
+        addTransection(newTransectoin);
+    }
+
     return (
         <div>
             <h3> Add New Transection</h3>
-            <form> 
+            <form onSubmit={onSubmit}> 
             <div className="form-control"> 
-                <labal className = "description" > 
+                <labal htmlFor = "description" > 
                         Description
                 </labal>
                 <input 
                     type="text" 
                     id="description" 
+                    value = {description}
+                    onChange = {(e)=> setDescription(e.target.value) } 
                     placeholder="Details of the Transection" 
-                    value = {Description}
-                    onChange = {(e)=> setDescription(e.target.value) }  />
+                    value = {description} />
             </div>
             <div className="form-control">   
             <label htmlFor="transectionamount"> 
@@ -28,10 +43,11 @@ export const AddTransection = () => {
             </label>
             <input 
                     type="number" 
-                    id="transectionamount" 
-                    placeholder="Enter Transection Amount" 
-                    value = {TransecrtionAmount}
-                    onChange = {(e)=> setTransecrtionAmount (e.target.value) }  />
+                    id="transectionAmount" 
+                    value = {transectionAmount}
+                    onChange = {(e)=> setTransecrtionAmount (e.target.value) }
+                    placeholder="Dollar Value of Transaction"
+                    required ="required"   />
             
             </div>
             <button className="btn"> 
@@ -41,3 +57,5 @@ export const AddTransection = () => {
         </div>
     )
 }
+
+
