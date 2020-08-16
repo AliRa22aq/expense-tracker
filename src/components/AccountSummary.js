@@ -1,6 +1,22 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {GlobalContext} from '../context/GlobalState'
+
 
 export const AccountSummary = () => {
+
+    const {transections} = useContext(GlobalContext);
+    const transectionAmounts = transections.map(transection => transection.transectionAmount)
+
+    const income = transectionAmounts
+    .filter(transection => transection > 0)
+    .reduce((acc, transection) => (acc += transection),0)
+    .toFixed(2)
+
+    const expense = transectionAmounts
+    .filter(transection => transection < 0)
+    .reduce((acc, transection) => (acc += transection),0)
+    .toFixed(2)
+
     return (
         <div className="inc-exp-container">
             <div> 
