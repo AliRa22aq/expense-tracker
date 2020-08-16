@@ -5,16 +5,12 @@ export default (state, action) => {
                 ...state,
                 transections: state.transections
                     .filter(transection => transection.id !== action.payload)
-             
-
             }
 
-        
         case 'ADD_TRANSECTION':
             return {
                 ...state,
                 transections: [action.payload, ...state.transections]
-
             }    
 
         default:
